@@ -21,10 +21,8 @@ public class MyMain {
     public static int magnitude(int a, int b) {
         if (java.lang.Math.abs(a) > java.lang.Math.abs(b)){
             return a;
-        } else if (java.lang.Math.abs(b) > java.lang.Math.abs(a)){
+        } else {
             return b;
-        }else{
-            return a;
         }
     }
 
@@ -37,12 +35,32 @@ public class MyMain {
     }
 
     public static void main(String[] args) {
-        // You may want to keep these lines of code to test that your methods work
-        System.out.println(median(1, 2, 3)); // should be 2
-        System.out.println(magnitude(-7, -1)); // should be -7
-        System.out.println(pythagoras(3, 4)); // should be 5.0
 
         Scanner scan = new Scanner(System.in);
-        // YOUR CODE HERE
+        System.out.println("Please type the function you would like to use. ('median' 'magnitude' 'pythagoras')");
+        String calcType = scan.nextLine();
+        if (calcType.equals("median")){
+            System.out.println("What's your first number?");
+            int a = scan.nextInt();
+            System.out.println("What's your second number?");
+            int b = scan.nextInt();
+            System.out.println("What's your third number?");
+            int c = scan.nextInt();
+            System.out.println(median(a,b,c) + " is the median.");
+        } else if (calcType.equals("magnitude")){
+            System.out.println("What's your first number?");
+            int aa = scan.nextInt();
+            System.out.println("What's your second number?");
+            int bb = scan.nextInt();
+            System.out.println(magnitude(aa, bb) + " is the magnitude.");
+        }else if (calcType.equals("pythagoras")){
+            System.out.println("What's your first number?");
+            int aaa = scan.nextInt();
+            System.out.println("What's your second number?");
+            int bbb = scan.nextInt();
+            System.out.println(pythagoras(aaa, bbb) + " is the hypotenuse.");
+        } else{
+            System.out.println("* Error 404 - NOT DEFINED CALCULATOR FUNCTION PLEASE TRY AGAIN *");
+        }
     }
 }
