@@ -60,7 +60,7 @@ public class MyMain {
             int bbb = scan.nextInt();
             System.out.println(pythagoras(aaa, bbb) + " is the hypotenuse.");
         } else{
-            System.out.println("* Error 404 - NOT DEFINED CALCULATOR FUNCTION PLEASE TRY AGAIN *");
+            System.out.println("*  Error 404 - NOT DEFINED CALCULATOR FUNCTION PLEASE TRY AGAIN  *");
         }
     }
 }
